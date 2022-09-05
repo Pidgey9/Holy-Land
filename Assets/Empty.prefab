@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4679337274457049583}
   - component: {fileID: 1809569897299049188}
   - component: {fileID: 3336645014455492193}
+  - component: {fileID: -7005195968401351991}
   m_Layer: 0
   m_Name: Empty
   m_TagString: Empty
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-7005195968401351991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251610097243641121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e52a18f0dd5a8d44af27975d0686945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 2958031460661216429, guid: abe631ac4c01b274a8d1a0e56a059d65, type: 3}

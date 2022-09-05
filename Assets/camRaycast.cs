@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camRaycast : MonoBehaviour
+public class CamRaycast : MonoBehaviour
 {
     public Camera cam;
     private void FixedUpdate()
@@ -11,7 +11,11 @@ public class camRaycast : MonoBehaviour
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
         if (hit.collider != null)
         {
-
+            Debug.Log(hit.collider);
         }
+        /*if (hit.collider.name == "sand")
+        {
+            Debug.Log("ahoy");
+        }*/
     }
 }
