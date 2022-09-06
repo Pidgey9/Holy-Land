@@ -24,7 +24,7 @@ namespace bunga
         public Tile[,] grid;
         private void Start()
         {
-            grid = new Tile[8, 6];
+            grid = new Tile[8, 6]; 
             transform.position = arrayPos.position;
             //transform.rotation = arrayPos.rotation;
             for (int i = 0; i < 8; i++)
@@ -53,8 +53,8 @@ namespace bunga
         void RandomUrMom(int i, int j)
         {
             float rand = Random.value;
-            if (rand < 0.3) grid[i, j] = Tile.sand;
-            else if (rand < 0.6) grid[i, j] = Tile.empty;
+            if (rand < 0.6) grid[i, j] = Tile.sand;
+            else if (rand < 0.8) grid[i, j] = Tile.empty;
             else if (rand < 0.9) grid[i, j] = Tile.villager;
             else grid[i, j] = Tile.seeds;
         }
