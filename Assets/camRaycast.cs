@@ -5,17 +5,31 @@ using UnityEngine;
 public class CamRaycast : MonoBehaviour
 {
     public Camera cam;
-    private void FixedUpdate()
+    public GameObject empty;
+    public GameObject sand;
+    public Var zNumber;
+    private void Update()
     {
         Ray ray = cam.ScreenPointToRay( Input.mousePosition );
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
-        if (hit.collider != null)
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(hit.collider);
+            if (hit.collider.CompareTag("Sand"))
+            {
+                Destroy(hit.collider.gameObject);
+                Instantiate(empty, hit.collider.transform.position, hit.collider.transform.rotation);
+            }
+            if (hit.collider.CompareTag("Empty"))
+            {
+                Destroy(hit.collider.gameObject);
+                Instantiate(sand, hit.collider.transform.position, hit.collider.transform.rotation);
+            }
+            if (hit.collider.CompareTag("Villager"))
+            {
+                Destroy(hit.collider.gameObject);
+                zNumber.value--;
+            }
         }
-        /*if (hit.collider.name == "sand")
-        {
-            Debug.Log("ahoy");
-        }*/
+
     }
 }

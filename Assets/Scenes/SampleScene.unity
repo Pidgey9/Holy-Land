@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 54318313}
   - component: {fileID: 54318312}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ManagerThing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
   villager: {fileID: 8097383759694964398, guid: f0e6360f74519a4458784107573d16a2, type: 3}
   seeds: {fileID: 4809715039177117655, guid: dee994ae3f423e7408ba8f918290db1c, type: 3}
   water: {fileID: 2958031460661216429, guid: abe631ac4c01b274a8d1a0e56a059d65, type: 3}
+  number: {fileID: 11400000, guid: 4cdb83f9b496c5f47862f5badf281176, type: 2}
 --- !u!4 &54318313
 Transform:
   m_ObjectHideFlags: 0
@@ -1558,6 +1559,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
+  empty: {fileID: 1251610097243641121, guid: f5d435d6c9a7b5842a126570e5e2c47e, type: 3}
+  sand: {fileID: 6676007763979647103, guid: 5831e9006c5d7924c9b4ab22955c5fd5, type: 3}
+  zNumber: {fileID: 11400000, guid: 4cdb83f9b496c5f47862f5badf281176, type: 2}
 --- !u!1001 &528936877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2060,6 +2064,7 @@ GameObject:
   - component: {fileID: 684317893}
   - component: {fileID: 684317895}
   - component: {fileID: 684317894}
+  - component: {fileID: 684317896}
   m_Layer: 5
   m_Name: Level Number
   m_TagString: Untagged
@@ -2184,6 +2189,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684317892}
   m_CullTransparentMesh: 1
+--- !u!114 &684317896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684317892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64406abe241606e46be5d380b3675af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: {fileID: 11400000, guid: 9474c7edf3b1e204297584aa3f45c656, type: 2}
+  zombieNumber: {fileID: 11400000, guid: 4cdb83f9b496c5f47862f5badf281176, type: 2}
 --- !u!4 &703016040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4790368499304011598, guid: abe631ac4c01b274a8d1a0e56a059d65, type: 3}
@@ -5118,6 +5137,7 @@ GameObject:
   - component: {fileID: 1776676114}
   - component: {fileID: 1776676116}
   - component: {fileID: 1776676115}
+  - component: {fileID: 1776676117}
   m_Layer: 5
   m_Name: Zombies Number
   m_TagString: Untagged
@@ -5242,6 +5262,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1776676113}
   m_CullTransparentMesh: 1
+--- !u!114 &1776676117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776676113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65dd396d6e184864f9736eea8e75765d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: {fileID: 11400000, guid: 4cdb83f9b496c5f47862f5badf281176, type: 2}
 --- !u!4 &1793378172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4790368499304011598, guid: abe631ac4c01b274a8d1a0e56a059d65, type: 3}

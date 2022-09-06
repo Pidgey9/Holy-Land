@@ -22,6 +22,11 @@ namespace bunga
         public GameObject seeds;
         public GameObject water;
         public Tile[,] grid;
+        public Var number;
+        private void Awake()
+        {
+            number.value = 0;
+        }
         private void Start()
         {
             grid = new Tile[8, 6]; 
@@ -45,8 +50,9 @@ namespace bunga
             if (grid[i, j] == Tile.empty) Instantiate(empty, transform.position, transform.rotation);
             if (grid[i, j] == Tile.villager)
             {
-                Instantiate(villager, transform.position, transform.rotation);
                 Instantiate(empty, transform.position, transform.rotation);
+                Instantiate(villager, transform.position, transform.rotation);
+                number.value++;
             }
             if (grid[i, j] == Tile.seeds) Instantiate(seeds, transform.position, transform.rotation);
         }
